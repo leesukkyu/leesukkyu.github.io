@@ -1,0 +1,33 @@
+.comp-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  z-index: 8000;
+  background-color: #fff;
+  height: 72px;
+  border-bottom: solid #000 2px;
+  padding: 0 20px;
+  .title-box {
+    float: left;
+    font-size: 20px;
+    .nav-link {
+      margin: 0 10px;
+      display: inline-block;
+      line-height: 70px;
+      font-size: 20px;
+    }
+  }
+  .nav-box {
+    float: right;
+    .nav-link-box {
+      display: inline-block;
+      .nav-link {
+        margin: 0 10px;
+        display: inline-block;
+        line-height: 70px;
+        font-size: 20px;
+      }
+    }
+  }
+}

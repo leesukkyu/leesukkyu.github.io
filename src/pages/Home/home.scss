@@ -1,0 +1,25 @@
+.home-comp {
+  .post-link-box {
+    width: 33.333%;
+    float: left;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+  }
+
+  .my-node-enter {
+    opacity: 0;
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+  .my-node-exit {
+    opacity: 1;
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+}
