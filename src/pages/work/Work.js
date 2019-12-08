@@ -1,8 +1,11 @@
 import React from "react";
 import $ from "jquery";
+import Masonry from "react-masonry-css";
 import { CSSTransition } from "react-transition-group";
 
-import "./home.scss";
+import "./work.scss";
+
+window.$ = $;
 
 class Home extends React.Component {
   constructor(props) {
@@ -29,12 +32,16 @@ class Home extends React.Component {
     const { postList, isPostListLoad } = this.state;
     return (
       <div className="home-comp">
-        <CSSTransition in={isPostListLoad} timeout={200} classNames="my-node">
-          <div>
+        <CSSTransition in={isPostListLoad} timeout={200} classNames="fade">
+          <Masonry
+            breakpointCols={4}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
             {postList.map((item, index) => {
               return <PostLink item={item} key={index}></PostLink>;
             })}
-          </div>
+          </Masonry>
         </CSSTransition>
       </div>
     );
@@ -44,17 +51,30 @@ class Home extends React.Component {
 function PostLink(props) {
   const item = props.item;
   console.log(item);
+  // 대표 이미지가 있는 글
   if (item.jetpack_featured_media_url) {
     return (
-      <div
-        className="post-link-box"
-        style={{
-          backgroundImage: `url('${item.jetpack_featured_media_url}')`
-        }}
-      ></div>
+      <div className="post-link-box">
+        <div className="post-link-content">
+          <img
+            className="post-image"
+            src={item.jetpack_featured_media_url}
+          ></img>
+        </div>
+      </div>
     );
-  } else {
-    return <div className="post-link-box">{item.title.rendered}</div>;
+  }
+  // 없는 글
+  else {
+    const $item = $(item.content.rendered);
+    return (
+      <div className="post-link-box">
+        <div className="post-link-content">
+          <div>{item.title.rendered}</div>{" "}
+          <div>{$item ? $item.html() : ""}</div>
+        </div>
+      </div>
+    );
   }
 }
 

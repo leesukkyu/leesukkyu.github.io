@@ -14,17 +14,22 @@ export default function Header() {
         <ul>
           <li className="nav-link-box">
             <Link className="nav-link" to="/">
-              Home
+              work
             </Link>
           </li>
           <li className="nav-link-box">
-            <Link className="nav-link" to="/about">
-              About
+            <Link className="nav-link" to="/infos">
+              infos
             </Link>
           </li>
           <li className="nav-link-box">
-            <Link className="nav-link" to="/users">
-              Users
+            <Link className="nav-link" to="/contact">
+              contact
+            </Link>
+          </li>
+          <li className="nav-link-box">
+            <Link className="nav-link" to="/follow">
+              follow
             </Link>
           </li>
         </ul>

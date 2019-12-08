@@ -2,9 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Header from "./Header";
-import Home from "./pages/Home/Home";
+import Work from "./pages/work/Work";
+import Infos from "./pages/infos/Infos";
+import Contact from "./pages/contact/Contact";
+import Follow from "./pages/follow/Follow";
 
-import './app.scss'
+import "./app.scss";
 
 export default function App() {
   return (
@@ -13,14 +16,17 @@ export default function App() {
         <Header></Header>
         <div className="content-wrap">
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route path="/infos">
+              <Infos />
             </Route>
-            <Route path="/users">
-              <Users />
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/follow">
+              <Follow />
             </Route>
             <Route path="/">
-              <Home />
+              <Work />
             </Route>
           </Switch>
         </div>
