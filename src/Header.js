@@ -6,28 +6,28 @@ export default function Header() {
   return (
     <header className="comp-header">
       <div className="title-box">
-        <Link className="nav-link" to="/">
+        <Link className="nav-link font-size-6" to="/">
           gogwe
         </Link>
       </div>
       <nav className="nav-box">
         <ul>
-          <li className="nav-link-box">
+          <li className="nav-link-box font-size-6">
             <Link className="nav-link" to="/">
               work
             </Link>
           </li>
-          <li className="nav-link-box">
+          <li className="nav-link-box font-size-6">
             <Link className="nav-link" to="/infos">
               infos
             </Link>
           </li>
-          <li className="nav-link-box">
+          <li className="nav-link-box font-size-6">
             <Link className="nav-link" to="/contact">
               contact
             </Link>
           </li>
-          <li className="nav-link-box">
+          <li className="nav-link-box font-size-6">
             <Link className="nav-link" to="/follow">
               follow
             </Link>

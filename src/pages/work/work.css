@@ -1,0 +1,43 @@
+.home-comp .post-link-box {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+  position: relative;
+}
+
+.home-comp .post-link-box .post-link-content {
+  opacity: 0.9;
+  -webkit-transition: all 0.23s ease;
+  transition: all 0.23s ease;
+  cursor: pointer;
+}
+
+.home-comp .post-link-box:hover .post-link-content {
+  opacity: 1;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  z-index: 2;
+}
+
+.home-comp .post-image {
+  width: 100%;
+}
+
+.home-comp .my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+
+.home-comp .my-masonry-grid_column {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+
+.home-comp .my-masonry-grid_column > div {
+  background: grey;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=work.css.map */

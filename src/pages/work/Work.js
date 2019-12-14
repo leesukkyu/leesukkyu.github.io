@@ -2,6 +2,7 @@ import React from "react";
 import $ from "jquery";
 import Masonry from "react-masonry-css";
 import { CSSTransition } from "react-transition-group";
+import NProgress from "nprogress";
 
 import "./work.scss";
 
@@ -17,6 +18,9 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    window.x = NProgress;
+    NProgress.start({ easing: "ease", speed: 500, trickleSpeed: 300 });
+    NProgress.set(0.7);
     $.ajax({
       method: "get",
       url: `https://gwerichang.com/gogwe/?rest_route=/wp/v2/posts`
@@ -25,6 +29,7 @@ class Home extends React.Component {
         postList: rs,
         isPostListLoad: true
       });
+      NProgress.done();
     });
   }
 
@@ -32,7 +37,7 @@ class Home extends React.Component {
     const { postList, isPostListLoad } = this.state;
     return (
       <div className="home-comp">
-        <CSSTransition in={isPostListLoad} timeout={200} classNames="fade">
+        <CSSTransition in={isPostListLoad} timeout={1000} classNames="fade">
           <Masonry
             breakpointCols={4}
             className="my-masonry-grid"
@@ -57,6 +62,7 @@ function PostLink(props) {
       <div className="post-link-box">
         <div className="post-link-content">
           <img
+            alt="gogwe"
             className="post-image"
             src={item.jetpack_featured_media_url}
           ></img>

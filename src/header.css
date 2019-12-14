@@ -8,34 +8,41 @@
   height: 72px;
   border-bottom: solid #000 2px;
   padding: 0 20px;
-  .title-box {
-    float: left;
-    font-size: 20px;
-    .nav-link {
-      margin: 0 10px;
-      display: inline-block;
-      line-height: 70px;
-      font-size: 20px;
-    }
-  }
-  .nav-box {
-    float: right;
-    .nav-link-box {
-      display: inline-block;
-      transition: 0.3s !important;
-      color: #000;
-      .nav-link {
-        margin: 0 10px;
-        display: inline-block;
-        line-height: 70px;
-        font-size: 20px;
-        letter-spacing: 1px;
-      }
-      &:hover {
-        color: #808080;
-      }
-    }
-  }
+}
+
+.comp-header .title-box {
+  float: left;
+  font-size: 20px;
+}
+
+.comp-header .title-box .nav-link {
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 70px;
+  font-size: 20px;
+}
+
+.comp-header .nav-box {
+  float: right;
+}
+
+.comp-header .nav-box .nav-link-box {
+  display: inline-block;
+  -webkit-transition: 0.3s !important;
+  transition: 0.3s !important;
+  color: #000;
+}
+
+.comp-header .nav-box .nav-link-box .nav-link {
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 70px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.comp-header .nav-box .nav-link-box:hover {
+  color: #808080;
 }
 
 /* Make clicks pass-through */
@@ -45,12 +52,10 @@
 
 #nprogress .bar {
   background: #000;
-
   position: fixed;
   z-index: 1031;
   top: 0px;
   left: 0;
-
   width: 100%;
   height: 2px;
 }
@@ -62,11 +67,10 @@
   right: 0px;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 10px #000, 0 0 5px #000;
+  -webkit-box-shadow: 0 0 10px #000, 0 0 5px #000;
+          box-shadow: 0 0 10px #000, 0 0 5px #000;
   opacity: 1;
-
   -webkit-transform: rotate(0deg) translate(0px, 0px);
-  -ms-transform: rotate(0deg) translate(0px, 0px);
   transform: rotate(0deg) translate(0px, 0px);
 }
 
@@ -78,3 +82,4 @@
 .nprogress-custom-parent #nprogress .bar {
   position: absolute;
 }
+/*# sourceMappingURL=header.css.map */

@@ -22,8 +22,8 @@ class Follow extends React.Component {
     const { isMounted } = this.state;
     return (
       <div className="follow-comp">
-        <CSSTransition in={isMounted} timeout={200} classNames="fade">
-          <div>follow</div>
+        <CSSTransition in={isMounted} timeout={1000} classNames="fade">
+          <h1>follow</h1>
         </CSSTransition>
       </div>
     );

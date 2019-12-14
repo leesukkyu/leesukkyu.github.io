@@ -1,0 +1,18 @@
+.infos-comp .title {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.infos-comp .sub-title {
+  line-height: 18px;
+  white-space: pre-wrap;
+  padding: 33px;
+}
+
+.infos-comp .footer {
+  padding: 20px;
+}
+/*# sourceMappingURL=infos.css.map */
