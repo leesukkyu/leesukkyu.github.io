@@ -11,7 +11,7 @@ import "./app.scss";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/test">
       <div>
         <Header></Header>
         <div className="content-wrap">
@@ -25,7 +25,13 @@ export default function App() {
             <Route path="/follow">
               <Follow />
             </Route>
-            <Route path="/">
+            <Route
+              path={["/work/:id"]}
+              render={props => {
+                return <Work {...props} />;
+              }}
+            ></Route>
+            <Route path={["/"]}>
               <Work />
             </Route>
           </Switch>

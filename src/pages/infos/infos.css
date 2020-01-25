@@ -15,4 +15,9 @@
 .infos-comp .footer {
   padding: 20px;
 }
+
+.infos-comp .list-box > li {
+  font-family: aktiv-grotesk;
+  font-weight: 400;
+}
 /*# sourceMappingURL=infos.css.map */

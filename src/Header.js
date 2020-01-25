@@ -28,9 +28,14 @@ export default function Header() {
             </Link>
           </li>
           <li className="nav-link-box font-size-6">
-            <Link className="nav-link" to="/follow">
+            <a
+              className="nav-link"
+              href="https://www.instagram.com/gogwe.studio/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               follow
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

@@ -1,0 +1,16 @@
+.contact-comp{
+    .img-box{
+        width: 100%;
+        height: 250px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .link{
+        color:#808080;
+        transition: .3s;
+        &:hover{
+            color:#000;
+        }
+    }
+}
